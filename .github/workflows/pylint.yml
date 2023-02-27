@@ -1,11 +1,16 @@
 name: Pylint
+# on:
+#   push:
+#     paths:
+#       - '**.py'
+#   pull_request:
+#     paths:
+#       - '**.py'
+
 on:
   push:
-    paths:
-      - '**.py'
-  pull_request:
-    paths:
-      - '**.py'
+    tags:
+      - 'v*.*.*'
 
 jobs:
   analyze:

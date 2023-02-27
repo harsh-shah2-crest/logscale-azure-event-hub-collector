@@ -1,18 +1,23 @@
 name: Pydocstyle
+# on:
+#   push:
+#     paths:
+#       - '**.py'
+#     branches:
+#       - main
+#       - dev
+
+#   pull_request:
+#     paths:
+#       - '**.py'
+#     branches: 
+#       - main
+#       - dev
+
 on:
   push:
-    paths:
-      - '**.py'
-    branches:
-      - main
-      - dev
-
-  pull_request:
-    paths:
-      - '**.py'
-    branches: 
-      - main
-      - dev
+    tags:
+      - 'v*.*.*'
 
 jobs:
   analyze:
