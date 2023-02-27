@@ -1,8 +1,8 @@
-name: "Release New Version"
+name: "Azure function zip"
 
 on: push
 jobs:
-  release:
+  create-zip:
     runs-on: ubuntu-latest
     env:
       ZIP_FILE_NAME: logscale_azure_function.zip
@@ -20,6 +20,6 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          name: Azure Function zip
-          path: ${{ env.ZIP_FILE_NAME }}
+          name: logscale_azure_function
+          path: ${{ env.DIR_NAME }}/*
       
