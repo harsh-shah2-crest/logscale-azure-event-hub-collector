@@ -1,4 +1,4 @@
-name: "Release New Version"
+name: "Build zip"
 
 on: push
 
@@ -8,7 +8,7 @@ env:
   PYTHON_VERSION: '3.8'                     # set this to the python version to use (e.g. '3.6', '3.7', '3.8')
 
 jobs:
-  release:
+  build:
     runs-on: ubuntu-latest
     env:
       ZIP_FILE_NAME: logscale_azure_function.zip
